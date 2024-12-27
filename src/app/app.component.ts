@@ -7,10 +7,12 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone
 import { faSearch } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de livro
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, TaskListComponentComponent, FontAwesomeModule,MenuLateralComponent, AnalyticsComponent],
+  imports: [RouterOutlet, CommonModule, TaskListComponentComponent, FontAwesomeModule,MenuLateralComponent, AnalyticsComponent, DashboardComponent, SettingsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

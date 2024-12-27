@@ -2,7 +2,7 @@
   <app-menu-lateral></app-menu-lateral>
     <main class="content">
       <div>
-        <app-dashboard></app-dashboard>
+        <app-dashboard *ngIf="page === 'Dashboard'"></app-dashboard>
         <app-task-list-component class="elemento-lista" *ngIf="page === 'Board'"></app-task-list-component>
         <app-analytics *ngIf="page === 'Analytics'"></app-analytics>
         <app-settings *ngIf="page === 'Settings'"></app-settings>
