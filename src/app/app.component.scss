@@ -1,0 +1,55 @@
+nav{
+    display: flex;
+    justify-content: center;
+    ul{
+        list-style: none;
+        display: flex;
+        li{
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+/*======================Bloco da lista de tarefas========================*/
+.div-grid-lista{
+    display: grid; /* Define que será uma grid */
+    grid-template-columns: repeat(4, 1fr); /* Cria 3 colunas de igual largura */
+    gap: 5px; /* Espaçamento entre os itens */
+    justify-content: center;
+    
+    .elemento-lista{
+        border-radius: 7px;
+        background-color: lightgray; /* Apenas para visualização */
+        padding: 20px; /* Espaçamento interno dos itens */
+        text-align: center; /* Centraliza o texto */
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*====================Fim do Bloco da lista de tarefas=====================*/
+
+/*=======================Bloco de adição de tarefa==========================*/
+.div-adicionar-tarefa{
+    margin: 10px 10px 10px 0px;
+    .input{
+        border:1px;
+        border-style: solid;
+        border-radius: 7px;
+        padding:5px;
+        height: 20px;
+        margin-right:5px
+    }
+    .button{
+        border-style: none;
+        border-radius:10px;
+        padding:10px;
+    }
+    .adicionarBtn{
+        color:#fff;
+        background-color:#00B526;
+    }
+}
+
+/*========================Fim do Bloco de adição de tarefa====================*/
