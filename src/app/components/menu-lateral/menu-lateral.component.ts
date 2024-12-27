@@ -18,10 +18,15 @@ export class MenuLateralComponent {
   faTableColumns = faTableColumns
   faGear = faGear
   faBarsProgress=faBarsProgress
-
   isOpen = false;
+  page:string = ""
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+  }
+  
+  alterarPage(value:string){
+    this.page = value
+    console.log("Página atual:", this.page)
   }
 }

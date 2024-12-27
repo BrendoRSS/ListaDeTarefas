@@ -6,10 +6,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importa
 import { faBook } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de livro
 import { faSearch } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de livro
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
+import { AnalyticsComponent } from './components/analytics/analytics.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, TaskListComponentComponent, FontAwesomeModule,MenuLateralComponent],
+  imports: [RouterOutlet, CommonModule, TaskListComponentComponent, FontAwesomeModule,MenuLateralComponent, AnalyticsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,6 +19,7 @@ export class AppComponent {
   blocoAdicionarTarefa: boolean = false
   faBook = faBook
   faSearch = faSearch
+  page = "Board"
 
   constructor(){
   }

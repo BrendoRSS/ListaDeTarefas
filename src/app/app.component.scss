@@ -13,6 +13,7 @@ nav{
 /* Grid principal */
 .layout {
     display: grid;
+    margin-left: 0;
     grid-template-columns: 200px 1fr; /* Sidebar com 250px e conteúdo preenchendo o restante */
     grid-template-rows: 150vh;       /* Altura total da janela */
   }
@@ -23,6 +24,7 @@ nav{
     background-color: #f4f4f4;
     padding: 7px;
     overflow-y: auto;
+    margin-left: 10px;
   }
   .content > nav > ul{
     display: flex;
@@ -51,25 +53,6 @@ nav{
 /*====================Fim do Bloco da lista de tarefas=====================*/
 
 /*=======================Bloco de adição de tarefa==========================*/
-.div-adicionar-tarefa{
-    margin: 10px 10px 10px 0px;
-    .input{
-        border:1px;
-        border-style: solid;
-        border-radius: 7px;
-        padding:5px;
-        height: 20px;
-        margin-right:5px
-    }
-    .button{
-        border-style: none;
-        border-radius:10px;
-        padding:10px;
-    }
-    .adicionarBtn{
-        color:#fff;
-        background-color:#00B526;
-    }
-}
+
 
 /*========================Fim do Bloco de adição de tarefa====================*/
