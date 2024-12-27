@@ -1,21 +1,20 @@
-<nav>
-  <ul>
-    <li><fa-icon [icon]="faBook"></fa-icon> Tarefas</li>
-    <li (click)="blocoAdicionarTarefa = true">Nova tarefa</li>
-  </ul>
-</nav>
-
-<section>
-  <div class="div-adicionar-tarefa" *ngIf="blocoAdicionarTarefa">
-    <input type="text" class="input" placeholder="Nome">
-    <input type="text" class="input" placeholder="Descrição">
-    <input type="date" class="input">
-    <button class="button adicionarBtn" (click)="adicionar()">Adicionar</button>
-  </div>
-  <div class="div-grid-lista">
-    <app-task-list-component class="elemento-lista" ></app-task-list-component>
-  </div>
-
+<section class="layout">
+  <app-menu-lateral></app-menu-lateral>
+    <main class="content">
+      <nav>
+        <ul>
+          <li><fa-icon [icon]="faSearch" style="padding-right:5px"></fa-icon><input type="text"></li>
+          <li><fa-icon [icon]="faBook"></fa-icon></li>
+        </ul>
+      </nav>
+      <div class="div-grid-lista">
+        <app-task-list-component class="elemento-lista" ></app-task-list-component>
+        
+      </div>
+    </main>
+  
+  
+  
 </section>
 
 <footer>

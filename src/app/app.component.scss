@@ -10,6 +10,26 @@ nav{
         }
     }
 }
+/* Grid principal */
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar com 250px e conteúdo preenchendo o restante */
+    grid-template-rows: 150vh;       /* Altura total da janela */
+  }
+  /* Fim da Grid principal */
+
+  /*=======================Conteúdo principal (main) ================== */
+.content {
+    background-color: #f4f4f4;
+    padding: 7px;
+    overflow-y: auto;
+  }
+  .content > nav > ul{
+    display: flex;
+    justify-content:space-evenly;
+    padding-bottom: 10px;
+  }
+ /* ==================Fim do Conteúdo principal (main) =============== */
 
 /*======================Bloco da lista de tarefas========================*/
 .div-grid-lista{
@@ -21,7 +41,7 @@ nav{
     .elemento-lista{
         border-radius: 7px;
         background-color: lightgray; /* Apenas para visualização */
-        padding: 20px; /* Espaçamento interno dos itens */
+        padding: 10px; /* Espaçamento interno dos itens */
         text-align: center; /* Centraliza o texto */
         display: flex;
         justify-content: center;
