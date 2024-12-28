@@ -1,0 +1,75 @@
+/* Remove margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para lidar melhor com espaçamentos */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+  position: relative; /* Necessário para que o z-index funcione */
+  z-index: 2; /* Garante que a sidebar esteja acima do conteúdo */
+
+  nav {
+     ul{
+      margin:20px;
+      list-style: none;
+      .itemLista:hover{
+        scale:1.1;
+        background-color: #333;
+      }
+       li{
+        padding: 10px 30px 30px 25px;
+        a{
+          text-decoration: none;
+          cursor: pointer;
+        }
+       }
+     }
+  }
+}
+
+/* Grid principal */
+.layout {
+  display: grid;
+  margin: -8px; /* Remove margem desnecessária */
+  grid-template-columns: 250px 1fr; /* Sidebar com 250px e conteúdo preenchendo o restante */
+  grid-template-rows: 100vh; /* Altura igual à janela */
+}
+
+/* Conteúdo principal (main) */
+.content {
+  background-color: #f4f4f4;
+  padding: 10px; /* Ajustado padding */
+  overflow-y: auto;
+  margin-left: 0px; /* Removida margem negativa */
+  position: relative; /* Necessário para que o z-index funcione */
+  z-index: 1; /* Conteúdo fica abaixo da sidebar */
+}
+
+/* Navegação dentro do conteúdo */
+.content > nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 0 10px 0;
+  list-style: none; /* Remove bullets */
+  margin: 0; /* Remove margens padrão */
+}
+
+.content > nav > ul > li {
+  margin: 0 5px; /* Espaçamento entre itens */
+}
+
+.content > nav > ul > li > a {
+  text-decoration: none;
+  color: #333; /* Cor do texto */
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.content > nav > ul > li > a:hover {
+  background-color: #ddd; /* Cor de fundo ao passar o mouse */
+  color: #000; /* Cor do texto ao passar o mouse */
+}

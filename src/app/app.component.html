@@ -1,16 +1,1 @@
-<section class="layout">
-  <app-menu-lateral></app-menu-lateral>
-    <main class="content">
-      <div>
-        <app-dashboard *ngIf="page === 'Dashboard'"></app-dashboard>
-        <app-task-list-component class="elemento-lista" *ngIf="page === 'Board'"></app-task-list-component>
-        <app-analytics *ngIf="page === 'Analytics'"></app-analytics>
-        <app-settings *ngIf="page === 'Settings'"></app-settings>
-      </div>
-    </main>
-</section>
-
-<footer>
-
-</footer>
 <router-outlet></router-outlet>
