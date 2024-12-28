@@ -9,10 +9,11 @@ import { faChartLine } from '@fortawesome/free-solid-svg-icons';  // Importa o �
 import { faTableColumns } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de banco de dados
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de board
 import { faGear } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de config
+import { TaskListComponentComponent } from '../../components/task-list-component/task-list-component.component';
 
 @Component({
   selector: 'app-home',
-  imports: [FontAwesomeModule, CommonModule, RouterOutlet],
+  imports: [FontAwesomeModule, CommonModule, RouterOutlet,TaskListComponentComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -26,5 +27,5 @@ export class HomeComponent {
   faChartLine=faChartLine
   faSearch = faSearch
   page:string = ""
-  
+
 }

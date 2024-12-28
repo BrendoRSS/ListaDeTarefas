@@ -1,13 +1,55 @@
 <nav>
     <ul>
-      <li><fa-icon [icon]="faSearch" style="padding-right:5px"></fa-icon><input type="text"></li>
+        <li>
+            <fa-icon [icon]="faSearch" style="padding-right:5px"></fa-icon>
+            <input type="text" placeholder="Search">
+        </li>
+        <li>
+            <div class="divIcons">
+                <fa-icon [icon]="faBell" style="padding-right:20px"></fa-icon>
+                <fa-icon class="fa-regular fa-circle-question" [icon]="faCircleQuestion"></fa-icon>
+                <div class="circle"></div>
+            </div>
+
+        </li>
     </ul>
 </nav>
 <div class="container">
-    <button class="button editarbtn"><fa-icon [icon]="faPen"></fa-icon></button>
-    <button class="button excluirbtn"><fa-icon [icon]="faTrash"></fa-icon></button>
-    <div>
-        <h2>teste</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptates esse. Labore rerum numquam possimus esse assumenda minus hic, et aperiam, quo quaerat officiis. Quis iste eveniet earum. Distinctio, perferendis!</p>
+    <div class="divTitleContainer">
+        <h2>Board</h2>
+        <div class="divFilter">Filter<fa-icon [icon]="faFilter" style="padding-left: 5px;"></fa-icon></div>
     </div>
+    <div class="containerGrid">
+        <div class="divisaoEtapa">
+            <div class="divTitleDivisaoEtapa">
+                <p class="titleDivisaoEtapa">To Do</p>
+                <div>
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faEllipsis"></fa-icon>
+                </div>
+            </div>
+            <app-card-tarefa></app-card-tarefa>
+        </div>
+        <div class="divisaoEtapa">
+            <div class="divTitleDivisaoEtapa">
+                <p class="titleDivisaoEtapa">Im progress</p>
+                <div>
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faEllipsis"></fa-icon>
+                </div>
+            </div>
+            <app-card-tarefa></app-card-tarefa>
+        </div>
+        <div class="divisaoEtapa">
+            <div class="divTitleDivisaoEtapa">
+                <p class="titleDivisaoEtapa">Done</p>
+                <div>
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faEllipsis"></fa-icon>
+                </div>
+            </div>
+            <app-card-tarefa></app-card-tarefa>
+        </div>
+    </div>
+
 </div>

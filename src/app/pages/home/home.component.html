@@ -2,20 +2,31 @@
     <aside class="sidebar">
       <nav>
           <ul>
+            <div>
               <li>
                   <a ><fa-icon [icon]="faBarsProgress"></fa-icon> Tarefas</a>
               </li>
+            </div>
           </ul>
           <ul>
-              <li class="itemLista"><a><fa-icon [icon]="faChartLine" ></fa-icon> Dashboard</a></li>
-              <li class="itemLista"><a><fa-icon [icon]="faTableColumns" ></fa-icon> Board</a></li>
-              <li class="itemLista"><a><fa-icon [icon]="faDatabase"></fa-icon> Analytics</a></li>
-              <li class="itemLista"><a><fa-icon [icon]="faGear"></fa-icon> Settings</a></li>
+            <div>
+                <li class="itemLista"><a><fa-icon [icon]="faChartLine" ></fa-icon> Dashboard</a></li>
+            </div>
+              <div>
+                <li class="itemLista"><a><fa-icon [icon]="faTableColumns" ></fa-icon> Board</a></li>
+              </div>
+              <div>
+                <li class="itemLista"><a><fa-icon [icon]="faDatabase"></fa-icon> Analytics</a></li>
+              </div>
+              <div>
+                <li class="itemLista"><a><fa-icon [icon]="faGear"></fa-icon> Settings</a></li>
+              </div>
+              
           </ul>
       </nav>
   </aside>
       <main class="content">
-        
+            <app-task-list-component></app-task-list-component>
       </main>
   </section>
   

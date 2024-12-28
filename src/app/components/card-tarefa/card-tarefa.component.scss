@@ -1,0 +1,28 @@
+ /* Estilização dos botões */
+            .cardTask {
+                display: flex;
+                margin: 20px;
+                padding: 20px;
+                background-color: #fff;
+                flex-direction: column;
+                border-radius: 20px;
+                /* Mantém o conteúdo em colunas */
+                gap: 10px;
+
+                /* Espaçamento interno entre os elementos */
+                .divButtons {
+                    .button {
+                        border: 1px solid;
+                        border-style: none;
+                        border-radius: 10px;
+                        width: 45px;
+                        height: 20px;
+                        margin-top: 10px
+                    }
+
+                    .editarbtn {
+                        margin-right: 5px
+                    }
+
+                }
+            }
