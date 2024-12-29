@@ -20,35 +20,54 @@
         <div class="divFilter">Filter<fa-icon [icon]="faFilter" style="padding-left: 5px;"></fa-icon></div>
     </div>
     <div class="containerGrid">
+        <!-- To Do Section -->
         <div class="divisaoEtapa">
             <div class="divTitleDivisaoEtapa">
                 <p class="titleDivisaoEtapa">To Do</p>
                 <div>
-                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faPlus" (click)="addCard('toDo')"></fa-icon>
                     <fa-icon [icon]="faEllipsis"></fa-icon>
                 </div>
             </div>
-            <app-card-tarefa></app-card-tarefa>
+            <app-card-tarefa 
+            *ngFor="let task of tasks.toDo" 
+            [title]="task.title"
+            [description]="task.description">
+            </app-card-tarefa>
         </div>
+
+        <!-- In Progress Section -->
         <div class="divisaoEtapa">
             <div class="divTitleDivisaoEtapa">
-                <p class="titleDivisaoEtapa">Im progress</p>
+                <p class="titleDivisaoEtapa">In Progress</p>
                 <div>
-                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faPlus" (click)="addCard('inProgress')"></fa-icon>
                     <fa-icon [icon]="faEllipsis"></fa-icon>
                 </div>
             </div>
-            <app-card-tarefa></app-card-tarefa>
+            <app-card-tarefa 
+            *ngFor="let task of tasks.inProgress" 
+            [title]="task.title"
+            [description]="task.description">
+        </app-card-tarefa>
         </div>
+
+        <!-- Done Section -->
         <div class="divisaoEtapa">
             <div class="divTitleDivisaoEtapa">
                 <p class="titleDivisaoEtapa">Done</p>
                 <div>
-                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faPlus" (click)="addCard('done')"></fa-icon>
                     <fa-icon [icon]="faEllipsis"></fa-icon>
                 </div>
             </div>
-            <app-card-tarefa></app-card-tarefa>
+
+            <app-card-tarefa 
+            *ngFor="let task of tasks.done" 
+            [title]="task.title"
+            [description]="task.description">
+            </app-card-tarefa>
+
         </div>
     </div>
 

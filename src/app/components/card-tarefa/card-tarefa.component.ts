@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Importa o módulo FontAwesome
 import { faPen } from '@fortawesome/free-solid-svg-icons'; // Importa o ícone
 import { faTrash } from '@fortawesome/free-solid-svg-icons';  // Importa o ícone de lixeira
@@ -11,4 +11,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';  // Importa o ícon
 export class CardTarefaComponent {
 faPen = faPen;  // Ícone de lápis
 faTrash = faTrash // Ícone de lixeira
+
+@Input() title: string = '';
+@Input() description: string = '';
 }
