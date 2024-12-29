@@ -19,6 +19,7 @@
         <h2>Board</h2>
         <div class="divFilter">Filter<fa-icon [icon]="faFilter" style="padding-left: 5px;"></fa-icon></div>
     </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     <div class="containerGrid">
         <!-- To Do Section -->
         <div class="divisaoEtapa">
@@ -32,7 +33,8 @@
             <app-card-tarefa 
             *ngFor="let task of tasks.toDo" 
             [title]="task.title"
-            [description]="task.description">
+            [description]="task.description"
+            (delete)="deleteTask('toDo', $event)">
             </app-card-tarefa>
         </div>
 
@@ -48,7 +50,8 @@
             <app-card-tarefa 
             *ngFor="let task of tasks.inProgress" 
             [title]="task.title"
-            [description]="task.description">
+            [description]="task.description"
+            (delete)="deleteTask('inProgress', $event)">
         </app-card-tarefa>
         </div>
 
@@ -65,7 +68,8 @@
             <app-card-tarefa 
             *ngFor="let task of tasks.done" 
             [title]="task.title"
-            [description]="task.description">
+            [description]="task.description"
+            (delete)="deleteTask('done', $event)">
             </app-card-tarefa>
 
         </div>
